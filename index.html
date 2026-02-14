@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Riti ❤️</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+}
+.page{display:none;padding:40px;}
+.active{display:block;}
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    margin:15px;
+}
+#yesBtn{
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+#noBtn{
+    background:#222;
+    color:white;
+    position:absolute;
+}
+img{
+    width:200px;
+    margin:10px;
+    border-radius:15px;
+}
+</style>
+</head>
+<body>
+
+<div id="page1" class="page active">
+<h1>Riti ❤️</h1>
+<h2>Will You Be My Valentine? 💖</h2>
+<button id="yesBtn" onclick="showPage2()">YES ❤️</button>
+<button id="noBtn" onmouseover="moveButton()">Never 😜</button>
+</div>
+
+<div id="page2" class="page">
+<h1>You Make My World Beautiful ✨</h1>
+<p>
+Riti, from the moment you came into my life, everything changed.
+Your smile is my peace, your happiness is my goal,
+and I want every tomorrow with you.
+<br><br>
+Forever Yours ❤️
+</p>
+
+<h2>Our Memories 📸</h2>
+<p>Add photos named photo1.jpg, photo2.jpg, photo3.jpg in same folder.</p>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+
+<script>
+function moveButton(){
+    var btn=document.getElementById("noBtn");
+    btn.style.left=Math.random()*(window.innerWidth-120)+"px";
+    btn.style.top=Math.random()*(window.innerHeight-60)+"px";
+}
+function showPage2(){
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
+</script>
+
+</body>
+</html>
